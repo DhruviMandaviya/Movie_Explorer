@@ -38,3 +38,11 @@ This project uses **MVVM + Clean Architecture**:
 | **StateFlow**        | Reactive state management              |
 | **ViewModel**        | Lifecycle-aware UI logic               |
 | **AndroidViewModel** | Application context support (for connectivity)
+
+# 📸 Screenshots
+![Screenshot 2025-06-18 at 9 25 27 PM](https://github.com/user-attachments/assets/618c0797-0b48-4289-b620-0097bee82c15)
+![Screenshot 2025-06-18 at 9 26 21 PM](https://github.com/user-attachments/assets/e0071dc3-75d2-4d9c-b27d-b2af02b32841)
+![Screenshot 2025-06-18 at 9 28 32 PM](https://github.com/user-attachments/assets/c3697100-5699-4e03-b278-76b9068ae955)
+
+
+
