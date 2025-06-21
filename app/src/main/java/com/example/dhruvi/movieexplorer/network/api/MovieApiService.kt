@@ -4,11 +4,17 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface MovieApi {
-    @GET("/")
+    @GET("search/movie")
     suspend fun searchMovies(
-        @Query("apikey") apiKey: String,
-        @Query("s") query: String,
+        @Query("api_key") apiKey: String,
+        @Query("query") query: String,
         @Query("page") page: Int = 1
     ): MovieResponse
 
+    @GET("discover/movie")
+    suspend fun discoverMoviesByGenre(
+        @Query("api_key") apiKey: String,
+        @Query("with_genres") genreID: Int,
+        @Query("page") page: Int = 1
+    ): MovieResponse
 }
