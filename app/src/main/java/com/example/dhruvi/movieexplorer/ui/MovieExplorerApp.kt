@@ -64,7 +64,7 @@ import com.example.dhruvi.movieexplorer.data.Genre
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MovieExplorerApp(viewModel: MovieViewModel,modifier: Modifier = Modifier) {
+fun MovieExplorerApp(viewModel: MovieViewModel) {
     val query = viewModel.searchQuery.collectAsState().value
     val movies = viewModel.movies.collectAsState().value
     val errorMessage = viewModel.errorMessage.collectAsState().value
