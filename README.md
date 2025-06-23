@@ -44,10 +44,11 @@ This app follows modern Android development best practices:
 - Keyboard dismiss handled on action/search button
 
 # 📸 Screenshots
-<img width="341" alt="Screenshot 2025-06-21 at 6 05 26 PM" src="https://github.com/user-attachments/assets/c2f5e42d-963b-4162-98d9-7ce521a474ca" />
-<img width="341" alt="Screenshot 2025-06-21 at 6 05 07 PM" src="https://github.com/user-attachments/assets/77cb4590-2cb8-4a37-972c-7811336a75c0" />
-<img width="341" alt="Screenshot 2025-06-21 at 6 04 19 PM" src="https://github.com/user-attachments/assets/eb84b6bc-d720-4549-bad8-ab69c49f387b" />
-<img width="341" alt="Screenshot 2025-06-21 at 6 06 49 PM" src="https://github.com/user-attachments/assets/140110a0-16a9-4e10-beb7-76418c056202" />
+![Screenshot 2025-06-22 at 9 46 53 PM](https://github.com/user-attachments/assets/9dc14cca-c71f-4ef8-97cf-d40f63073829)
+![Screenshot 2025-06-22 at 9 46 38 PM](https://github.com/user-attachments/assets/54670ad8-9646-4c06-a9e9-99d82cecbec1)
+![Screenshot 2025-06-22 at 9 45 55 PM](https://github.com/user-attachments/assets/ed245e17-7021-423d-b3c2-2ef8447dd487)
+![Screenshot 2025-06-22 at 9 45 42 PM](https://github.com/user-attachments/assets/2f78da92-a036-4db1-adaf-207d3b22e32e)
+
 
 
 
