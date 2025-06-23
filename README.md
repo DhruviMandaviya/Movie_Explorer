@@ -1,48 +1,53 @@
 # 🎬 Movie Explorer
 
-A modern Android app built with **Jetpack Compose**, implementing clean architecture principles, pagination, and offline-aware UI using the [OMDb API](http://www.omdbapi.com/).
+A modern Android application that allows users to search and discover movies by title or genre using The Movie Database (TMDb) API.
 
----
+## 📱 Features
 
-## 🌟 Features
+- 🔍 Search for movies by title
+- 🎭 Browse and filter movies by genre (Action, Drama, Sci-Fi, etc.)
+- 📄 View movie details such as title, release year, rating, and description
+- 📶 Offline-aware UI with no-internet detection dialog
+- 🔄 Pagination to load more results as the user scrolls
+- ✅ Clear genre selection when typing, and reset search on genre selection
+- 🧠 Clean architecture with ViewModel + Repository pattern
 
-- 🔍 **Search** for movies by name  
-- 🖼️ View **movie posters, titles, and release years**  
-- 🔄 **Pagination** with infinite scrolling support  
-- 📶 **Offline handling**: shows dialog when mobile data or Wi-Fi is turned off  
-- 🎨 Smooth **UI**, overflow text handling, and responsive layout  
-- 🎹 **Keyboard-aware input** and automatic dismiss behavior
+## 🏗️ Architecture Overview
+This app follows modern Android development best practices:
 
----
+- **MVVM (Model-View-ViewModel)**
+- **Single Activity / Jetpack Compose UI**
+- **StateFlow + ViewModel** for reactive state handling
+- **Repository pattern** for API/data interaction
+- **Modular code** to enhance readability and scalability
 
-## 🏗 Architecture
+## 🛠️ Tech Stack
 
-This project uses **MVVM + Clean Architecture**:
+- Kotlin
+- Jetpack Compose
+- StateFlow / Coroutine Flow
+- Retrofit for network calls
+- Material 3
+- The Movie Database (TMDb) API
 
-- **UI Layer** – Jetpack Compose, StateFlow, Dialogs
-- **ViewModel Layer** – Business logic, pagination, connectivity detection
-- **Repository Layer** – Network abstraction using Retrofit
-- **Network Layer** – OMDb API integration via Retrofit + Moshi
+## 🔌 API Integration
 
----
+- TMDb Search API for querying movies by text
+- TMDb Discover API for filtering movies by genre
 
-## 🛠 Tech Stack
+## 🧪 Edge Cases Handled
 
-| Tool                 | Purpose                                |
-|----------------------|----------------------------------------|
-| **Kotlin**           | Primary programming language           |
-| **Jetpack Compose**  | Declarative UI toolkit                 |
-| **Retrofit**         | HTTP client for networking             |
-| **Gson**             | JSON parsing                           |
-| **Coil**             | Image loading from URL                 |
-| **StateFlow**        | Reactive state management              |
-| **ViewModel**        | Lifecycle-aware UI logic               |
-| **AndroidViewModel** | Application context support (for connectivity)
+- No internet connection: Shows alert dialog
+- Empty search: Displays helpful error message
+- No results found: Error message for user
+- Genre deselected when typing a new query, and vice versa
+- Keyboard dismiss handled on action/search button
 
 # 📸 Screenshots
-![Screenshot 2025-06-18 at 9 25 27 PM](https://github.com/user-attachments/assets/618c0797-0b48-4289-b620-0097bee82c15)
-![Screenshot 2025-06-18 at 9 26 21 PM](https://github.com/user-attachments/assets/e0071dc3-75d2-4d9c-b27d-b2af02b32841)
-![Screenshot 2025-06-18 at 9 28 32 PM](https://github.com/user-attachments/assets/c3697100-5699-4e03-b278-76b9068ae955)
+<img width="341" alt="Screenshot 2025-06-21 at 6 05 26 PM" src="https://github.com/user-attachments/assets/c2f5e42d-963b-4162-98d9-7ce521a474ca" />
+<img width="341" alt="Screenshot 2025-06-21 at 6 05 07 PM" src="https://github.com/user-attachments/assets/77cb4590-2cb8-4a37-972c-7811336a75c0" />
+<img width="341" alt="Screenshot 2025-06-21 at 6 04 19 PM" src="https://github.com/user-attachments/assets/eb84b6bc-d720-4549-bad8-ab69c49f387b" />
+<img width="341" alt="Screenshot 2025-06-21 at 6 06 49 PM" src="https://github.com/user-attachments/assets/140110a0-16a9-4e10-beb7-76418c056202" />
 
 
 
