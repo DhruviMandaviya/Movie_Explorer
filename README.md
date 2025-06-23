@@ -13,7 +13,6 @@ A modern Android application that allows users to search and discover movies by 
 - 🧠 Clean architecture with ViewModel + Repository pattern
 
 ## 🏗️ Architecture Overview
-
 This app follows modern Android development best practices:
 
 - **MVVM (Model-View-ViewModel)**
