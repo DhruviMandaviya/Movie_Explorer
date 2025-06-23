@@ -4,6 +4,7 @@ import com.example.dhruvi.movieexplorer.network.api.MovieApi
 
 class MovieRepository(
     private val apiService: MovieApi,
+    // API key for TMDB (should be stored securely in real apps)
     private val API_KEY: String = "c98b8dc1166cb4b46f1f6b49502e2281"
 ) {
     // Fetch movies by search query and page
