@@ -75,6 +75,7 @@ fun MovieExplorerApp(viewModel: MovieViewModel) {
     val isConnected = viewModel.isConnected.collectAsState().value
     var selectedGenre by remember { mutableStateOf<Genre?>(null) }
 
+    // Hardcoded list of genres used for filtering
     val movieGenres = listOf(
         Genre(28, "Action"),
         Genre(12, "Adventure"),
@@ -97,6 +98,7 @@ fun MovieExplorerApp(viewModel: MovieViewModel) {
         Genre(37, "Western")
     )
 
+    // Select the first genre by default if none is selected
     LaunchedEffect(Unit) {
         if (viewModel.selectedGenreId.value == null) {
             val defaultGenre = movieGenres.first()
@@ -105,6 +107,7 @@ fun MovieExplorerApp(viewModel: MovieViewModel) {
         }
     }
 
+    // Show alert if no internet connection
     if (!isConnected) {
         AlertDialog(
             onDismissRequest = {},
@@ -132,7 +135,7 @@ fun MovieExplorerApp(viewModel: MovieViewModel) {
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        // Search TextField
+        // Search bar for movie name
         TextField(
             value = query,
             maxLines = 1,
@@ -174,7 +177,7 @@ fun MovieExplorerApp(viewModel: MovieViewModel) {
 
         Spacer(modifier = Modifier.height(10.dp))
 
-        // Genres Chips Row
+        // Genre filter chip row
         GenreChipRow(
             genres = movieGenres,
             selectedGenre = selectedGenre,
@@ -216,7 +219,7 @@ fun MovieExplorerApp(viewModel: MovieViewModel) {
                 }
             }
 
-            // Trigger load more when scrolled to the end
+            // Pagination: Load next page when reaching end of list
             LaunchedEffect(
                 key1 = listState.firstVisibleItemIndex,
                 key2 = listState.layoutInfo.totalItemsCount
@@ -325,7 +328,7 @@ fun MovieCard(movie: Movies, onClick: () -> Unit = {}) {
                 ) {
                     Text(
                         text = movie.release_date?.takeIf { it.length >= 4 }?.take(4) ?: "N/A",
-                        color = Color.Gray,
+                        color = Color.White,
                         style = MaterialTheme.typography.bodySmall
                     )
                     Row(verticalAlignment = Alignment.CenterVertically) {
@@ -338,7 +341,7 @@ fun MovieCard(movie: Movies, onClick: () -> Unit = {}) {
                         Text(
                             text = String.format("%.1f", movie.vote_average) + "/10",
                             style = MaterialTheme.typography.bodySmall,
-                            color = Color.Gray
+                            color = Color.White
                         )
                     }
                 }

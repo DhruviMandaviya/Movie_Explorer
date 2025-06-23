@@ -16,11 +16,14 @@ class NetworkMonitor(context: Context) {
     private val connectivityManager =
         context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 
+    // Callback to monitor network connectivity changes
     private val networkCallback = object : ConnectivityManager.NetworkCallback() {
+        // Called when a network becomes available
         override fun onAvailable(network: Network) {
             _isConnected.value = true
         }
 
+        // Called when the network is lost
         override fun onLost(network: Network) {
             _isConnected.value = false
         }
